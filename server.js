@@ -1,5 +1,6 @@
 const express = require('express');
-const { Sequelize } = require('sequelize/types');
+// what is this? below 
+// const { Sequelize } = require('sequelize/types');
 const routes = require('./routes');
 const path = require('path');
 // import sequelize connection from the config folder connection file 
