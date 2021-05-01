@@ -1,3 +1,5 @@
+
+// model and Data type are methods? things we are using from seq 
 const { Model, DataTypes } = require('sequelize');
 //this brings in our connection to seq via connections vs file in config folder 
 const sequelize = require('../config/connection.js');

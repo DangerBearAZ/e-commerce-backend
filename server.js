@@ -2,8 +2,9 @@ const express = require('express');
 const { Sequelize } = require('sequelize/types');
 const routes = require('./routes');
 const path = require('path');
-// import sequelize connection
+// import sequelize connection from the config folder connection file 
 const sequelize = require('./config/connection');
+
 
 
 const app = express();

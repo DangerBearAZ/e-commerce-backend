@@ -35,7 +35,6 @@ Product.init(
       allowNull: false,
       defaultValue: 10,
       validate: {
-        // this means default value 10
         isNumeric: true
       }
     },
