@@ -19,7 +19,7 @@ app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
 // force false IF changed to "true"  would drop and recreate all database tables on startup for when we make changes to the Sequelize models
-
+// make sure to npm run seed after recreating tables
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
