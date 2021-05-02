@@ -24,10 +24,13 @@ router.get('/', (req, res) => {
 
   // find one category by its `id` value
 router.get('/:id', (req, res) => {
-  // be sure to include its associated Products
   Category.findOne({
     where: {
       id: req.params.id
+    },
+    //include its associated Products
+    include: {
+      model: Product
     }
   })
   .then(dbCategoryData => {

@@ -26,6 +26,11 @@ router.get('/:id', (req, res) => {
   Product.findOne({
     where: {
       id: req.params.id
+    },
+    //include its associated Category and Tag data
+    include: {
+      model: Category,
+      model, Tag
     }
   })
   .then(dbProductData  => {
@@ -40,7 +45,7 @@ router.get('/:id', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
-  // be sure to include its associated Category and Tag data
+  
 });
 
 // create new product
