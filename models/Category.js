@@ -19,7 +19,7 @@ Category.init(
       // instruct that this is the Primary Key
       primaryKey: true,
       //auto increment for primary key 
-      autoincrement: true
+      autoIncrement: true
     },
     // defining next column over "category_name"
     category_name: {

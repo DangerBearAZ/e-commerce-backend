@@ -1,3 +1,4 @@
+// you left off making routs for get one prodcut 
 const express = require('express');
 // what is this? below 
 // const { Sequelize } = require('sequelize/types');

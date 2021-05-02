@@ -3,15 +3,36 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// get all products
+// find all products
 router.get('/', (req, res) => {
-  // find all products
   // be sure to include its associated Category and Tag data
+ Product.findAll()
+ .then(dbProductData => res. json(dbProductData))
+ .catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
 });
 
-// get one product
+// get one product by its `id` value
 router.get('/:id', (req, res) => {
-  // find a single product by its `id`
+  Product.findOne({
+    where: {
+      id: res.params.id
+    }
+  })
+  .then(dbProductData  => {
+    console.log(dbProductData)
+    if(!dbProductDatas) {
+      res.status(400).json({ message: 'No product found with this id.'})
+      return;
+    }
+    res.json(dbProductData)
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
   // be sure to include its associated Category and Tag data
 });
 
