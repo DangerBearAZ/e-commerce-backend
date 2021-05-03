@@ -9,8 +9,10 @@ router.get('/', (req, res) => {
  Product.findAll({
    include: [
      {
-       model: Category,
-       model: Tag
+       model: Category
+     },
+     {
+       model:Tag
      }
    ]
  })
